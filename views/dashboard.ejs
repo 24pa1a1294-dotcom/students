@@ -1,0 +1,8 @@
+<%- include('layout', { title: 'Dashboard', userId: user.id, body: '' }) %>
+<% layout = false %>
+<section class="card">
+  <h2>Dashboard</h2>
+  <p>Welcome, <strong><%= user.name %></strong></p>
+  <p>Your email: <%= user.email %></p>
+  <p><a class="button" href="/logout">Log out</a></p>
+</section>

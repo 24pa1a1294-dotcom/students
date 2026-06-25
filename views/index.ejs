@@ -1,0 +1,11 @@
+<%- include('layout', { title: 'Home', userId: userId, body: '' }) %>
+<% layout = false %>
+<section class="card">
+  <h2>Welcome</h2>
+  <p>This demo shows Sign Up, Sign In, and a protected Dashboard.</p>
+  <% if (!userId) { %>
+    <p><a class="button" href="/signup">Get started</a></p>
+  <% } else { %>
+    <p><a class="button" href="/dashboard">Open Dashboard</a></p>
+  <% } %>
+</section>

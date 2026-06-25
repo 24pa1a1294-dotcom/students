@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title><%= title || 'Auth Demo' %></title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>Auth Demo</h1>
+        <nav>
+          <a href="/">Home</a>
+          <% if (!userId) { %>
+            <a href="/signup">Sign Up</a>
+            <a href="/signin">Sign In</a>
+          <% } else { %>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/logout">Logout</a>
+          <% } %>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <%- body %>
+    </main>
+  </body>
+</html>
